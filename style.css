@@ -112,10 +112,10 @@ body {
     justify-content: center;
 }
 
-/* --- UX & NAVIGATION: FORMAT TOGGLE --- */
+/* --- HERO SECTION --- */
 .hero-section {
     text-align: center;
-    padding: 100px 0 60px; /* Aumentado para compensar la navbar fija */
+    padding: 100px 0 60px;
 }
 
 .hero-title {
@@ -157,19 +157,19 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* --- CONTENT & CRO: COURSE CARDS --- */
+/* --- COURSE CARDS --- */
 .courses-section { padding: 40px 0 80px; }
 
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
 }
 
 .course-card {
     background: var(--bg-card);
     border-radius: var(--radius);
-    padding: 24px;
+    overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
@@ -178,15 +178,36 @@ body {
 }
 
 .course-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+}
+
+.course-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .badge {
@@ -196,6 +217,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .badge.online { background: #D1FAE5; color: #065F46; }
@@ -206,6 +228,14 @@ body {
     font-weight: 700;
     margin-bottom: 8px;
     line-height: 1.3;
+    color: var(--text-main);
+}
+
+.course-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.5;
 }
 
 .course-meta {
@@ -223,28 +253,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #F3F4F6;
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--primary);
 }
 
 .btn-add-cart {
     background: var(--primary);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
+    font-size: 0.95rem;
 }
 
-.btn-add-cart:hover { background: var(--primary-hover); }
+.btn-add-cart:hover { 
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
-/* --- YOUTUBE INTEGRATION SECTION --- */
+/* --- YOUTUBE SECTION --- */
 .youtube-section {
     background: white;
     padding: 80px 0;
@@ -309,8 +346,10 @@ body {
 
 .hidden { display: none !important; }
 
-/* Responsive básico para la navbar */
+/* Responsive */
 @media (max-width: 900px) {
-    .nav-menu { display: none; } /* En una versión final se añadiría un menú hamburguesa */
+    .nav-menu { display: none; }
     .nav-container { justify-content: space-between; }
+    .hero-title { font-size: 2rem; }
+    .course-grid { grid-template-columns: 1fr; }
 }
