@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algode Formación - Modern Mockup</title>
+    <title>Algode Formación - Cursos Profesionales</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,81 +39,151 @@
 
     <!-- HERO & TOGGLE -->
     <section class="hero-section container">
-        <h1 class="hero-title">Encuentra tu próximo curso</h1>
-        <p class="hero-subtitle">Elige entre aprendizaje online flexible o formación presencial inmersiva.</p>
+        <h1 class="hero-title">Formación Profesional Práctica</h1>
+        <p class="hero-subtitle">Cursos presenciales y online para impulsar tu carrera profesional</p>
         
         <div class="format-toggle">
-            <button class="toggle-btn active" data-filter="online">🌐 Cursos Online</button>
-            <button class="toggle-btn" data-filter="onsite">📍 Cursos Presenciales</button>
+            <button class="toggle-btn active" data-filter="onsite">📍 Cursos Presenciales</button>
+            <button class="toggle-btn" data-filter="online">🌐 Cursos Online</button>
         </div>
     </section>
 
     <!-- COURSE GRID -->
     <section class="courses-section container">
         <div class="course-grid" id="courseGrid">
-            <!-- Tarjeta 1 -->
-            <div class="course-card" data-type="online">
-                <div class="card-header">
-                    <h3 class="course-title">Desarrollo Web Avanzado</h3>
-                    <span class="badge online">Online</span>
-                </div>
-                <div class="course-meta">
-                    <span class="meta-item">⏱️ 40 Horas</span>
-                    <span class="meta-item">📊 Avanzado</span>
-                </div>
-                <div class="card-footer">
-                    <span class="price">299€</span>
-                    <button class="btn-add-cart">Añadir al carrito</button>
-                </div>
-            </div>
-
-            <!-- Tarjeta 2 -->
+            
+            <!-- Curso 1: Preparación de Pedidos -->
             <div class="course-card" data-type="onsite">
-                <div class="card-header">
-                    <h3 class="course-title">Masterclass de Diseño UX/UI</h3>
-                    <span class="badge onsite">Presencial</span>
+                <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="image-placeholder">📦</div>
                 </div>
-                <div class="course-meta">
-                    <span class="meta-item">️ 20 Horas</span>
-                    <span class="meta-item">📊 Intermedio</span>
-                </div>
-                <div class="card-footer">
-                    <span class="price">450€</span>
-                    <button class="btn-add-cart">Reservar plaza</button>
-                </div>
-            </div>
-
-            <!-- Tarjeta 3 -->
-            <div class="course-card" data-type="online">
-                <div class="card-header">
-                    <h3 class="course-title">Python para Ciencia de Datos</h3>
-                    <span class="badge online">Online</span>
-                </div>
-                <div class="course-meta">
-                    <span class="meta-item">⏱️ 60 Horas</span>
-                    <span class="meta-item">📊 Principiante</span>
-                </div>
-                <div class="card-footer">
-                    <span class="price">199€</span>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Preparación de Pedidos 2021</h3>
+                        <span class="badge onsite">Presencial</span>
+                    </div>
+                    <p class="course-description">Aprende las técnicas y protocolos para la preparación eficiente de pedidos en almacenes logísticos.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 20 Horas</span>
+                        <span class="meta-item">📊 Todos los niveles</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">150€</span>
+                        <button class="btn-add-cart">Reservar plaza</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Tarjeta 4 -->
+            <!-- Curso 2: Carretilla Elevadora -->
             <div class="course-card" data-type="onsite">
-                <div class="card-header">
-                    <h3 class="course-title">Bootcamp de Marketing Digital</h3>
-                    <span class="badge onsite">Presencial</span>
+                <div class="course-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="image-placeholder">🚜</div>
                 </div>
-                <div class="course-meta">
-                    <span class="meta-item">⏱️ 30 Horas</span>
-                    <span class="meta-item">📊 Todos los niveles</span>
-                </div>
-                <div class="card-footer">
-                    <span class="price">350€</span>
-                    <button class="btn-add-cart">Reservar plaza</button>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Curso de Carretilla Elevadora</h3>
+                        <span class="badge onsite">Presencial</span>
+                    </div>
+                    <p class="course-description">Formación teórica y práctica para la conducción segura de carretillas elevadoras en entornos industriales.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 25 Horas</span>
+                        <span class="meta-item">📊 Principiante</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">150€</span>
+                        <button class="btn-add-cart">Reservar plaza</button>
+                    </div>
                 </div>
             </div>
+
+            <!-- Curso 3: Operaciones Auxiliares de Almacenaje -->
+            <div class="course-card" data-type="onsite">
+                <div class="course-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="image-placeholder">🏭</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Operaciones Auxiliares de Almacenaje</h3>
+                        <span class="badge onsite">Presencial</span>
+                    </div>
+                    <p class="course-description">Gestión y organización de almacenes, control de stock y operaciones logísticas básicas.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 30 Horas</span>
+                        <span class="meta-item">📊 Todos los niveles</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">200€</span>
+                        <button class="btn-add-cart">Reservar plaza</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 4: Plataforma Elevadora (PEMP) -->
+            <div class="course-card" data-type="onsite">
+                <div class="course-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="image-placeholder">🏗️</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Plataforma Elevadora (PEMP)</h3>
+                        <span class="badge onsite">Presencial</span>
+                    </div>
+                    <p class="course-description">Certificación para el manejo seguro de plataformas elevadoras móviles de personal.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 20 Horas</span>
+                        <span class="meta-item">📊 Principiante</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">150€</span>
+                        <button class="btn-add-cart">Reservar plaza</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 5: Sensibilización Medioambiental -->
+            <div class="course-card" data-type="online">
+                <div class="course-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="image-placeholder">🌱</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Sensibilización Medioambiental</h3>
+                        <span class="badge online">Online</span>
+                    </div>
+                    <p class="course-description">Concienciación sobre prácticas sostenibles y responsabilidad ambiental en el entorno laboral.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 15 Horas</span>
+                        <span class="meta-item">📊 Todos los niveles</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">100€</span>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 6: Inserción Laboral -->
+            <div class="course-card" data-type="online">
+                <div class="course-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    <div class="image-placeholder">💼</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="course-title">Inserción Laboral</h3>
+                        <span class="badge online">Online</span>
+                    </div>
+                    <p class="course-description">Herramientas y estrategias para la búsqueda activa de empleo y desarrollo profesional.</p>
+                    <div class="course-meta">
+                        <span class="meta-item">⏱️ 15 Horas</span>
+                        <span class="meta-item">📊 Todos los niveles</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">100€</span>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -131,7 +201,7 @@
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">Introducción a React Hooks</h4>
+                        <h4 class="video-title">Conducción Segura de Carretillas</h4>
                         <p class="video-meta">12:45 • 15K vistas</p>
                     </div>
                 </div>
@@ -140,7 +210,7 @@
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">Diseñando para la Accesibilidad</h4>
+                        <h4 class="video-title">Gestión Eficiente de Almacenes</h4>
                         <p class="video-meta">18:20 • 8K vistas</p>
                     </div>
                 </div>
@@ -149,7 +219,7 @@
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">Mejores prácticas SEO 2026</h4>
+                        <h4 class="video-title">Prevención de Riesgos Laborales</h4>
                         <p class="video-meta">22:10 • 21K vistas</p>
                     </div>
                 </div>
