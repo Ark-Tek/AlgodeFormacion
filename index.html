@@ -1,93 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algode Formación - Modern Mockup</title>
-    <!-- Link to external CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Import Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Algode<span>Formación</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Inicio</a></li>
+                <li><a href="#" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#" class="nav-link">Consultoría</a></li>
+                <li><a href="#" class="nav-link">Contacto</a></li>
+                <li><a href="#" class="nav-link active-link">Cursos</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-link nav-account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    Mi Cuenta
+                </a>
+                <a href="#" class="nav-cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <!-- HERO & TOGGLE -->
     <section class="hero-section container">
-        <h1 class="hero-title">Find Your Next Course</h1>
-        <p class="hero-subtitle">Choose between flexible online learning or immersive onsite training.</p>
+        <h1 class="hero-title">Encuentra tu próximo curso</h1>
+        <p class="hero-subtitle">Elige entre aprendizaje online flexible o formación presencial inmersiva.</p>
         
         <div class="format-toggle">
-            <button class="toggle-btn active" data-filter="online">🌐 Online Courses</button>
-            <button class="toggle-btn" data-filter="onsite">📍 Onsite Courses</button>
+            <button class="toggle-btn active" data-filter="online">🌐 Cursos Online</button>
+            <button class="toggle-btn" data-filter="onsite">📍 Cursos Presenciales</button>
         </div>
     </section>
 
     <!-- COURSE GRID -->
     <section class="courses-section container">
         <div class="course-grid" id="courseGrid">
-            <!-- Card 1 -->
+            <!-- Tarjeta 1 -->
             <div class="course-card" data-type="online">
                 <div class="card-header">
-                    <h3 class="course-title">Advanced Web Development</h3>
+                    <h3 class="course-title">Desarrollo Web Avanzado</h3>
                     <span class="badge online">Online</span>
                 </div>
                 <div class="course-meta">
-                    <span class="meta-item">⏱️ 40 Hours</span>
-                    <span class="meta-item">📊 Advanced</span>
+                    <span class="meta-item">⏱️ 40 Horas</span>
+                    <span class="meta-item">📊 Avanzado</span>
                 </div>
                 <div class="card-footer">
-                    <span class="price">€299</span>
-                    <button class="btn-add-cart">Add to Cart</button>
+                    <span class="price">299€</span>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Tarjeta 2 -->
             <div class="course-card" data-type="onsite">
                 <div class="card-header">
-                    <h3 class="course-title">UX/UI Design Masterclass</h3>
-                    <span class="badge onsite">Onsite</span>
+                    <h3 class="course-title">Masterclass de Diseño UX/UI</h3>
+                    <span class="badge onsite">Presencial</span>
                 </div>
                 <div class="course-meta">
-                    <span class="meta-item">⏱️ 20 Hours</span>
-                    <span class="meta-item">📊 Intermediate</span>
+                    <span class="meta-item">️ 20 Horas</span>
+                    <span class="meta-item">📊 Intermedio</span>
                 </div>
                 <div class="card-footer">
-                    <span class="price">€450</span>
-                    <button class="btn-add-cart">Reserve Spot</button>
+                    <span class="price">450€</span>
+                    <button class="btn-add-cart">Reservar plaza</button>
                 </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Tarjeta 3 -->
             <div class="course-card" data-type="online">
                 <div class="card-header">
-                    <h3 class="course-title">Python for Data Science</h3>
+                    <h3 class="course-title">Python para Ciencia de Datos</h3>
                     <span class="badge online">Online</span>
                 </div>
                 <div class="course-meta">
-                    <span class="meta-item">⏱️ 60 Hours</span>
-                    <span class="meta-item">📊 Beginner</span>
+                    <span class="meta-item">⏱️ 60 Horas</span>
+                    <span class="meta-item">📊 Principiante</span>
                 </div>
                 <div class="card-footer">
-                    <span class="price">€199</span>
-                    <button class="btn-add-cart">Add to Cart</button>
+                    <span class="price">199€</span>
+                    <button class="btn-add-cart">Añadir al carrito</button>
                 </div>
             </div>
 
-            <!-- Card 4 -->
+            <!-- Tarjeta 4 -->
             <div class="course-card" data-type="onsite">
                 <div class="card-header">
-                    <h3 class="course-title">Digital Marketing Bootcamp</h3>
-                    <span class="badge onsite">Onsite</span>
+                    <h3 class="course-title">Bootcamp de Marketing Digital</h3>
+                    <span class="badge onsite">Presencial</span>
                 </div>
                 <div class="course-meta">
-                    <span class="meta-item">⏱️ 30 Hours</span>
-                    <span class="meta-item">📊 All Levels</span>
+                    <span class="meta-item">⏱️ 30 Horas</span>
+                    <span class="meta-item">📊 Todos los niveles</span>
                 </div>
                 <div class="card-footer">
-                    <span class="price">€350</span>
-                    <button class="btn-add-cart">Reserve Spot</button>
+                    <span class="price">350€</span>
+                    <button class="btn-add-cart">Reservar plaza</button>
                 </div>
             </div>
         </div>
@@ -97,46 +121,42 @@
     <section class="youtube-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Free Masterclasses</h2>
-                <p class="section-subtitle">Watch our latest tutorials and get a feel for our teaching style.</p>
+                <h2 class="section-title">Masterclasses Gratuitas</h2>
+                <p class="section-subtitle">Mira nuestros últimos tutoriales y conoce nuestro método de enseñanza.</p>
             </div>
             
             <div class="video-grid">
-                <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">Introduction to React Hooks</h4>
-                        <p class="video-meta">12:45 • 15K views</p>
+                        <h4 class="video-title">Introducción a React Hooks</h4>
+                        <p class="video-meta">12:45 • 15K vistas</p>
                     </div>
                 </div>
-                <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">Designing for Accessibility</h4>
-                        <p class="video-meta">18:20 • 8K views</p>
+                        <h4 class="video-title">Diseñando para la Accesibilidad</h4>
+                        <p class="video-meta">18:20 • 8K vistas</p>
                     </div>
                 </div>
-                <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-btn"><div class="play-icon"></div></div>
                     </div>
                     <div class="video-info">
-                        <h4 class="video-title">SEO Best Practices 2026</h4>
-                        <p class="video-meta">22:10 • 21K views</p>
+                        <h4 class="video-title">Mejores prácticas SEO 2026</h4>
+                        <p class="video-meta">22:10 • 21K vistas</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Link to external JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
