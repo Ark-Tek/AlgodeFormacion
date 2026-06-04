@@ -14,18 +14,18 @@
     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Algode<span>Formación</span></a>
+            <a href="#inicio" class="nav-logo">Algode<span>Formación</span></a>
             
             <ul class="nav-menu">
-                <li><a href="#" class="nav-link">Inicio</a></li>
-                <li><a href="#" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#" class="nav-link">Consultoría</a></li>
-                <li><a href="#" class="nav-link">Contacto</a></li>
-                <li><a href="#" class="nav-link active-link">Cursos</a></li>
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#consultoria" class="nav-link">Consultoría</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#cursos" class="nav-link active-link">Cursos</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="#" class="nav-link nav-account">
+                <a href="#mi-cuenta" class="nav-link nav-account">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                     Mi Cuenta
                 </a>
@@ -37,160 +37,261 @@
         </div>
     </nav>
 
-    <!-- HERO & TOGGLE -->
-    <section class="hero-section container">
-        <h1 class="hero-title">Formación Profesional Práctica</h1>
-        <p class="hero-subtitle">Cursos presenciales y online para impulsar tu carrera profesional</p>
-        
-        <div class="format-toggle">
-            <button class="toggle-btn active" data-filter="onsite">📍 Cursos Presenciales</button>
-            <button class="toggle-btn" data-filter="online">🌐 Cursos Online</button>
+    <!-- SECCIÓN: INICIO -->
+    <section id="inicio" class="section-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-tag">🎓 Formación Profesional Certificada</span>
+            <h1 class="hero-title">Impulsa tu carrera con formación práctica</h1>
+            <p class="hero-subtitle">Cursos presenciales y online en logística, seguridad industrial y desarrollo profesional. Aprende con expertos del sector.</p>
+            <div class="hero-buttons">
+                <a href="#cursos" class="btn-primary">Ver Cursos</a>
+                <a href="#contacto" class="btn-secondary">Contactar</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">Cursos Disponibles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Alumnos Formados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Práctico</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- COURSE GRID -->
-    <section class="courses-section container">
-        <div class="course-grid" id="courseGrid">
+    <!-- SECCIÓN: SOBRE MÍ -->
+    <section id="sobre-mi" class="section-about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conócenos</span>
+                <h2 class="section-title">Sobre Algode Formación</h2>
+                <p class="section-subtitle">Más de 10 años formando profesionales del sector logístico e industrial</p>
+            </div>
             
-            <!-- Curso 1: Preparación de Pedidos -->
-            <div class="course-card" data-type="onsite">
-                <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <div class="image-placeholder">📦</div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <span class="about-emoji">👨‍🏫</span>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Preparación de Pedidos 2021</h3>
-                        <span class="badge onsite">Presencial</span>
-                    </div>
-                    <p class="course-description">Aprende las técnicas y protocolos para la preparación eficiente de pedidos en almacenes logísticos.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 20 Horas</span>
-                        <span class="meta-item">📊 Todos los niveles</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">150€</span>
-                        <button class="btn-add-cart">Reservar plaza</button>
-                    </div>
+                <div class="about-content">
+                    <h3>Experiencia que marca la diferencia</h3>
+                    <p>En Algode Formación nos especializamos en ofrecer cursos prácticos y certificados que preparan a los alumnos para el mundo laboral real. Nuestros instructores son profesionales activos en el sector.</p>
+                    <ul class="about-list">
+                        <li>✅ Instructores certificados con experiencia real</li>
+                        <li>✅ Instalaciones equipadas con maquinaria actual</li>
+                        <li>✅ Certificaciones reconocidas oficialmente</li>
+                        <li>✅ Formación 100% práctica y aplicada</li>
+                        <li>✅ Bolsa de empleo para alumnos destacados</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Habla con nosotros</a>
                 </div>
             </div>
-
-            <!-- Curso 2: Carretilla Elevadora -->
-            <div class="course-card" data-type="onsite">
-                <div class="course-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                    <div class="image-placeholder">🚜</div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Curso de Carretilla Elevadora</h3>
-                        <span class="badge onsite">Presencial</span>
-                    </div>
-                    <p class="course-description">Formación teórica y práctica para la conducción segura de carretillas elevadoras en entornos industriales.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 25 Horas</span>
-                        <span class="meta-item">📊 Principiante</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">150€</span>
-                        <button class="btn-add-cart">Reservar plaza</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 3: Operaciones Auxiliares de Almacenaje -->
-            <div class="course-card" data-type="onsite">
-                <div class="course-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                    <div class="image-placeholder">🏭</div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Operaciones Auxiliares de Almacenaje</h3>
-                        <span class="badge onsite">Presencial</span>
-                    </div>
-                    <p class="course-description">Gestión y organización de almacenes, control de stock y operaciones logísticas básicas.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 30 Horas</span>
-                        <span class="meta-item">📊 Todos los niveles</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">200€</span>
-                        <button class="btn-add-cart">Reservar plaza</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 4: Plataforma Elevadora (PEMP) -->
-            <div class="course-card" data-type="onsite">
-                <div class="course-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                    <div class="image-placeholder">🏗️</div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Plataforma Elevadora (PEMP)</h3>
-                        <span class="badge onsite">Presencial</span>
-                    </div>
-                    <p class="course-description">Certificación para el manejo seguro de plataformas elevadoras móviles de personal.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 20 Horas</span>
-                        <span class="meta-item">📊 Principiante</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">150€</span>
-                        <button class="btn-add-cart">Reservar plaza</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 5: Sensibilización Medioambiental -->
-            <div class="course-card" data-type="online">
-                <div class="course-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                    <div class="image-placeholder">🌱</div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Sensibilización Medioambiental</h3>
-                        <span class="badge online">Online</span>
-                    </div>
-                    <p class="course-description">Concienciación sobre prácticas sostenibles y responsabilidad ambiental en el entorno laboral.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 15 Horas</span>
-                        <span class="meta-item">📊 Todos los niveles</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">100€</span>
-                        <button class="btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Curso 6: Inserción Laboral -->
-            <div class="course-card" data-type="online">
-                <div class="course-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-                    <div class="image-placeholder">💼</div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="course-title">Inserción Laboral</h3>
-                        <span class="badge online">Online</span>
-                    </div>
-                    <p class="course-description">Herramientas y estrategias para la búsqueda activa de empleo y desarrollo profesional.</p>
-                    <div class="course-meta">
-                        <span class="meta-item">⏱️ 15 Horas</span>
-                        <span class="meta-item">📊 Todos los niveles</span>
-                    </div>
-                    <div class="card-footer">
-                        <span class="price">100€</span>
-                        <button class="btn-add-cart">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- YOUTUBE SECTION -->
+    <!-- SECCIÓN: CONSULTORÍA -->
+    <section id="consultoria" class="section-consulting">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Servicios Profesionales</span>
+                <h2 class="section-title">Consultoría Especializada</h2>
+                <p class="section-subtitle">Soluciones a medida para empresas del sector logístico e industrial</p>
+            </div>
+
+            <div class="consulting-grid">
+                <div class="consulting-card">
+                    <div class="consulting-icon"></div>
+                    <h3>Optimización de Almacenes</h3>
+                    <p>Análisis y mejora de procesos logísticos para aumentar la eficiencia operativa de tu almacén.</p>
+                    <a href="#contacto" class="consulting-link">Solicitar información →</a>
+                </div>
+
+                <div class="consulting-card">
+                    <div class="consulting-icon">⚙️</div>
+                    <h3>Seguridad Industrial</h3>
+                    <p>Auditorías y planes de prevención de riesgos laborales adaptados a tu empresa.</p>
+                    <a href="#contacto" class="consulting-link">Solicitar información →</a>
+                </div>
+
+                <div class="consulting-card">
+                    <div class="consulting-icon"></div>
+                    <h3>Formación In-Company</h3>
+                    <p>Cursos personalizados impartidos directamente en las instalaciones de tu empresa.</p>
+                    <a href="#contacto" class="consulting-link">Solicitar información →</a>
+                </div>
+
+                <div class="consulting-card">
+                    <div class="consulting-icon"></div>
+                    <h3>Certificaciones</h3>
+                    <p>Asesoramiento para obtener certificaciones oficiales en manejo de maquinaria.</p>
+                    <a href="#contacto" class="consulting-link">Solicitar información →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CURSOS -->
+    <section id="cursos" class="section-courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Catálogo Formativo</span>
+                <h2 class="section-title">Nuestros Cursos</h2>
+                <p class="section-subtitle">Elige entre formación presencial u online según tus necesidades</p>
+            </div>
+            
+            <div class="format-toggle">
+                <button class="toggle-btn active" data-filter="onsite"> Cursos Presenciales</button>
+                <button class="toggle-btn" data-filter="online"> Cursos Online</button>
+            </div>
+
+            <div class="course-grid" id="courseGrid">
+                <!-- Curso 1 -->
+                <div class="course-card" data-type="onsite">
+                    <div class="course-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="image-placeholder">📦</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Preparación de Pedidos 2021</h3>
+                            <span class="badge onsite">Presencial</span>
+                        </div>
+                        <p class="course-description">Aprende las técnicas y protocolos para la preparación eficiente de pedidos en almacenes logísticos.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">⏱️ 20 Horas</span>
+                            <span class="meta-item">📊 Todos los niveles</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">150€</span>
+                            <button class="btn-add-cart">Reservar plaza</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="course-card" data-type="onsite">
+                    <div class="course-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="image-placeholder">🚜</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Curso de Carretilla Elevadora</h3>
+                            <span class="badge onsite">Presencial</span>
+                        </div>
+                        <p class="course-description">Formación teórica y práctica para la conducción segura de carretillas elevadoras.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">️ 25 Horas</span>
+                            <span class="meta-item">📊 Principiante</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">150€</span>
+                            <button class="btn-add-cart">Reservar plaza</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="course-card" data-type="onsite">
+                    <div class="course-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="image-placeholder">🏭</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Operaciones Auxiliares de Almacenaje</h3>
+                            <span class="badge onsite">Presencial</span>
+                        </div>
+                        <p class="course-description">Gestión y organización de almacenes, control de stock y operaciones logísticas.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">️ 30 Horas</span>
+                            <span class="meta-item">📊 Todos los niveles</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">200€</span>
+                            <button class="btn-add-cart">Reservar plaza</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 4 -->
+                <div class="course-card" data-type="onsite">
+                    <div class="course-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <div class="image-placeholder">🏗️</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Plataforma Elevadora (PEMP)</h3>
+                            <span class="badge onsite">Presencial</span>
+                        </div>
+                        <p class="course-description">Certificación para el manejo seguro de plataformas elevadoras móviles de personal.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">⏱️ 20 Horas</span>
+                            <span class="meta-item"> Principiante</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">150€</span>
+                            <button class="btn-add-cart">Reservar plaza</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 5 -->
+                <div class="course-card" data-type="online">
+                    <div class="course-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="image-placeholder">🌱</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Sensibilización Medioambiental</h3>
+                            <span class="badge online">Online</span>
+                        </div>
+                        <p class="course-description">Concienciación sobre prácticas sostenibles y responsabilidad ambiental.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">⏱️ 15 Horas</span>
+                            <span class="meta-item">📊 Todos los niveles</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">100€</span>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 6 -->
+                <div class="course-card" data-type="online">
+                    <div class="course-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <div class="image-placeholder">💼</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3 class="course-title">Inserción Laboral</h3>
+                            <span class="badge online">Online</span>
+                        </div>
+                        <p class="course-description">Herramientas y estrategias para la búsqueda activa de empleo.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">⏱️ 15 Horas</span>
+                            <span class="meta-item">📊 Todos los niveles</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">100€</span>
+                            <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: YOUTUBE -->
     <section class="youtube-section">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">Contenido Gratuito</span>
                 <h2 class="section-title">Masterclasses Gratuitas</h2>
                 <p class="section-subtitle">Mira nuestros últimos tutoriales y conoce nuestro método de enseñanza.</p>
             </div>
@@ -226,6 +327,177 @@
             </div>
         </div>
     </section>
+
+    <!-- SECCIÓN: CONTACTO -->
+    <section id="contacto" class="section-contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hablemos</span>
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Tienes dudas? Escríbenos y te responderemos en menos de 24 horas</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Calle Ejemplo 123, Madrid, España</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+34 900 123 456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@algode.es</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"></div>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" placeholder="+34 600 000 000">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: MI CUENTA -->
+    <section id="mi-cuenta" class="section-account">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Área Privada</span>
+                <h2 class="section-title">Mi Cuenta</h2>
+                <p class="section-subtitle">Accede a tus cursos, certificados y progreso formativo</p>
+            </div>
+
+            <div class="account-container">
+                <div class="account-tabs">
+                    <button class="account-tab active" data-tab="login">Iniciar Sesión</button>
+                    <button class="account-tab" data-tab="register">Registrarse</button>
+                </div>
+
+                <div class="account-content">
+                    <!-- Login Form -->
+                    <div class="account-panel active" id="login-panel">
+                        <form class="account-form">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Contraseña</label>
+                                <input type="password" id="login-password" placeholder="••••••••" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> Recordarme
+                                </label>
+                                <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">Iniciar Sesión</button>
+                        </form>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="account-panel" id="register-panel">
+                        <form class="account-form">
+                            <div class="form-group">
+                                <label for="reg-name">Nombre completo</label>
+                                <input type="text" id="reg-name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" id="reg-email" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-password">Contraseña</label>
+                                <input type="password" id="reg-password" placeholder="Mínimo 8 caracteres" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-password2">Confirmar contraseña</label>
+                                <input type="password" id="reg-password2" placeholder="Repite la contraseña" required>
+                            </div>
+                            <label class="checkbox-label terms-label">
+                                <input type="checkbox" required> Acepto los términos y condiciones
+                            </label>
+                            <button type="submit" class="btn-primary btn-full">Crear cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Algode<span>Formación</span></h4>
+                    <p>Formación profesional práctica para el sector logístico e industrial.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#consultoria">Consultoría</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Algode Formación. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
