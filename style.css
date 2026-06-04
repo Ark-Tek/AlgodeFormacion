@@ -28,10 +28,94 @@ body {
     padding: 0 24px;
 }
 
+/* --- NAVBAR STYLES --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid #E5E7EB;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.nav-logo span {
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover, .nav-link.active-link {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-cart {
+    position: relative;
+    color: var(--text-main);
+    transition: color 0.2s;
+}
+
+.nav-cart:hover { color: var(--primary); }
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* --- UX & NAVIGATION: FORMAT TOGGLE --- */
 .hero-section {
     text-align: center;
-    padding: 80px 0 60px;
+    padding: 100px 0 60px; /* Aumentado para compensar la navbar fija */
 }
 
 .hero-title {
@@ -223,5 +307,10 @@ body {
 .video-title { font-weight: 600; margin-bottom: 8px; }
 .video-meta { font-size: 0.875rem; color: var(--text-muted); }
 
-/* Utility */
 .hidden { display: none !important; }
+
+/* Responsive básico para la navbar */
+@media (max-width: 900px) {
+    .nav-menu { display: none; } /* En una versión final se añadiría un menú hamburguesa */
+    .nav-container { justify-content: space-between; }
+}
