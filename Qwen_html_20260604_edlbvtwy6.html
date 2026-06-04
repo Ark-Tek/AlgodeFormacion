@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algode Formación - Modern Mockup</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HERO & TOGGLE -->
+    <section class="hero-section container">
+        <h1 class="hero-title">Find Your Next Course</h1>
+        <p class="hero-subtitle">Choose between flexible online learning or immersive onsite training.</p>
+        
+        <div class="format-toggle">
+            <button class="toggle-btn active" data-filter="online">🌐 Online Courses</button>
+            <button class="toggle-btn" data-filter="onsite">📍 Onsite Courses</button>
+        </div>
+    </section>
+
+    <!-- COURSE GRID -->
+    <section class="courses-section container">
+        <div class="course-grid" id="courseGrid">
+            <!-- Card 1 -->
+            <div class="course-card" data-type="online">
+                <div class="card-header">
+                    <h3 class="course-title">Advanced Web Development</h3>
+                    <span class="badge online">Online</span>
+                </div>
+                <div class="course-meta">
+                    <span class="meta-item">⏱️ 40 Hours</span>
+                    <span class="meta-item">📊 Advanced</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">€299</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card" data-type="onsite">
+                <div class="card-header">
+                    <h3 class="course-title">UX/UI Design Masterclass</h3>
+                    <span class="badge onsite">Onsite</span>
+                </div>
+                <div class="course-meta">
+                    <span class="meta-item">⏱️ 20 Hours</span>
+                    <span class="meta-item">📊 Intermediate</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">€450</span>
+                    <button class="btn-add-cart">Reserve Spot</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card" data-type="online">
+                <div class="card-header">
+                    <h3 class="course-title">Python for Data Science</h3>
+                    <span class="badge online">Online</span>
+                </div>
+                <div class="course-meta">
+                    <span class="meta-item">⏱️ 60 Hours</span>
+                    <span class="meta-item">📊 Beginner</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">€199</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card" data-type="onsite">
+                <div class="card-header">
+                    <h3 class="course-title">Digital Marketing Bootcamp</h3>
+                    <span class="badge onsite">Onsite</span>
+                </div>
+                <div class="course-meta">
+                    <span class="meta-item">⏱️ 30 Hours</span>
+                    <span class="meta-item">📊 All Levels</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">€350</span>
+                    <button class="btn-add-cart">Reserve Spot</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YOUTUBE SECTION -->
+    <section class="youtube-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Free Masterclasses</h2>
+                <p class="section-subtitle">Watch our latest tutorials and get a feel for our teaching style.</p>
+            </div>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-btn"><div class="play-icon"></div></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">Introduction to React Hooks</h4>
+                        <p class="video-meta">12:45 • 15K views</p>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-btn"><div class="play-icon"></div></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">Designing for Accessibility</h4>
+                        <p class="video-meta">18:20 • 8K views</p>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-btn"><div class="play-icon"></div></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">SEO Best Practices 2026</h4>
+                        <p class="video-meta">22:10 • 21K views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
