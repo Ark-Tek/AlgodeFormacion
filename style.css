@@ -342,10 +342,24 @@ body {
     align-items: center;
 }
 
+/* Styles for the Sobre Mi image */
 .about-image {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3; /* Keeps the image perfectly proportional */
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents the image from stretching or squishing */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover .about-img {
+    transform: scale(1.03); /* Adds a nice subtle zoom effect on hover */
 }
 
 .about-placeholder {
