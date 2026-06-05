@@ -11,23 +11,32 @@
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="nav-logo">Algode<span>Formación</span></a>
-            
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#consultoria" class="nav-link">Consultoría</a></li>
-                <li><a href="#cursos" class="nav-link active-link">Cursos</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
+    <!-- BARRA DE NAVEGACIÓN CON LOGO CENTRAL -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        
+        <!-- MENÚ IZQUIERDO -->
+        <ul class="nav-menu nav-menu-left">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#consultoria" class="nav-link">Consultoría</a></li>
+        </ul>
 
+        <!-- LOGO CENTRAL -->
+        <a href="#inicio" class="nav-logo-center">
+            <img src="images/logo.png" alt="Algode Formación" class="logo-img">
+        </a>
+
+        <!-- MENÚ DERECHO + ACCIONES -->
+        <div class="nav-right">
+            <ul class="nav-menu nav-menu-right">
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#cursos" class="nav-link">Cursos</a></li>
+            </ul>
+            
             <div class="nav-actions">
                 <a href="#mi-cuenta" class="nav-link nav-account">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    Mi Cuenta
                 </a>
                 <a href="#" class="nav-cart">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
@@ -35,7 +44,8 @@
                 </a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- SECCIÓN: INICIO -->
     <section id="inicio" class="section-hero">
