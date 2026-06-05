@@ -36,7 +36,7 @@ body {
 }
 
 /* ============================================
-   NAVBAR WITH CENTERED LOGO
+   NAVBAR WITH PERFECTLY CENTERED LOGO
    ============================================ */
 .navbar {
     position: fixed;
@@ -56,23 +56,27 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 24px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    position: relative;
 }
 
-/* CENTERED LOGO */
+/* CENTERED LOGO - Absolute positioning for perfect centering */
 .nav-logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     transition: transform 0.3s ease;
+    z-index: 10;
 }
 
 .nav-logo-center:hover {
-    transform: scale(1.05);
+    transform: translateX(-50%) scale(1.05);
 }
 
 .logo-img {
@@ -92,17 +96,16 @@ body {
 }
 
 .nav-menu-left {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .nav-menu-right {
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 24px;
 }
 
@@ -1032,7 +1035,7 @@ body {
    ============================================ */
 @media (max-width: 900px) {
     .nav-container {
-        grid-template-columns: auto 1fr auto;
+        padding: 0 16px;
     }
     
     .nav-menu-left,
@@ -1041,7 +1044,13 @@ body {
     }
     
     .nav-logo-center {
-        justify-content: flex-start;
+        position: relative;
+        left: auto;
+        transform: none;
+    }
+    
+    .nav-logo-center:hover {
+        transform: scale(1.05);
     }
     
     .logo-img {
