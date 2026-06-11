@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripción | Algode Formación</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Algode<span>.</span></a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 style="text-align: center;">Finaliza tu Inscripción</h1>
+      <div class="enrollment-container">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        
+        <form id="enrollmentForm">
+          <!-- Step 1 -->
+          <div class="form-step active" data-step="1">
+            <h3>Paso 1: Confirma tu Curso</h3>
+            <div class="form-group">
+              <label>Curso Seleccionado</label>
+              <input type="text" value="Operador de Carretilla Elevadora" readonly style="background: var(--bg-light);">
+            </div>
+            <div class="form-group">
+              <label>Fecha de Inicio</label>
+              <select required><option>15 de Junio, 2026</option><option>20 de Julio, 2026</option></select>
+            </div>
+            <div class="form-actions"><span></span><button type="button" class="btn btn-primary btn-next">Siguiente</button></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" data-step="2">
+            <h3>Paso 2: Tus Datos</h3>
+            <div class="form-group"><label>Nombre Completo</label><input type="text" required></div>
+            <div class="form-group"><label>DNI / NIE</label><input type="text" required></div>
+            <div class="form-group"><label>Email</label><input type="email" required></div>
+            <div class="form-actions"><button type="button" class="btn btn-secondary btn-prev">Atrás</button><button type="button" class="btn btn-primary btn-next">Siguiente</button></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" data-step="3">
+            <h3>Paso 3: Pago Seguro</h3>
+            <div class="form-group"><label>Número de Tarjeta</label><input type="text" placeholder="**** **** **** ****" required></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group"><label>Expiración</label><input type="text" placeholder="MM/AA" required></div>
+              <div class="form-group"><label>CVC</label><input type="text" placeholder="123" required></div>
+            </div>
+            <div class="form-actions"><button type="button" class="btn btn-secondary btn-prev">Atrás</button><button type="submit" class="btn btn-primary">Pagar 150€</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/enrollment.js"></script>
+</body>
+</html>
