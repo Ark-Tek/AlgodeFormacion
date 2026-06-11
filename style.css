@@ -1,12 +1,41 @@
-/* COLOR VARIABLES - DEFINE YOUR BRAND COLORS HERE */
-:root {
-    --primary: #2563eb;           /* Blue - main brand color */
-    --primary-light: #dbeafe;     /* Light blue - for hover backgrounds */
-    --text-main: #1f2937;         /* Dark gray - main text */
-    --text-muted: #6b7280;        /* Medium gray - secondary text */
-}
 /* ============================================
-   NAVBAR WITH PERFECTLY CENTERED LOGO & ADJUSTED SPACING
+   1. ROOT VARIABLES & GLOBAL RESET
+   ============================================ */
+:root {
+    --primary: #2563eb;           /* Main brand color (Blue) */
+    --primary-light: #dbeafe;     /* Light blue for backgrounds */
+    --text-main: #1f2937;         /* Dark gray for main text */
+    --text-muted: #6b7280;        /* Medium gray for secondary text */
+    --bg-light: #f9fafb;          /* Very light gray for section backgrounds */
+    --white: #ffffff;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ============================================
+   2. NAVBAR (Your existing code)
    ============================================ */
 .navbar {
     position: fixed;
@@ -16,14 +45,14 @@
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid var(--border);
     z-index: 1000;
     padding: 12px 0;
     transition: all 0.3s ease;
 }
 
 .nav-container {
-    max-width: 1000px; /* 👈 REDUCED from 1300px to bring menus closer */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -32,7 +61,6 @@
     position: relative;
 }
 
-/* CENTERED LOGO */
 .nav-logo-center {
     position: absolute;
     left: 50%;
@@ -40,73 +68,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    transition: transform 0.3s ease;
     z-index: 10;
 }
 
-.nav-logo-center:hover {
-    transform: translateX(-50%) scale(1.05);
-}
+.nav-logo-center:hover { transform: translateX(-50%) scale(1.05); }
+.logo-img { height: 50px; width: auto; object-fit: contain; }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
+.nav-menu { display: flex; list-style: none; gap: 8px; }
+.nav-menu-left { justify-content: flex-start; margin-right: 30px; }
+.nav-menu-right { justify-content: flex-end; }
 
-/* SIDE MENUS - Added margins to control the gap */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-}
+.nav-right { display: flex; align-items: center; gap: 24px; margin-left: 30px; }
 
-.nav-menu-left {
-    justify-content: flex-start;
-    margin-right: 30px; /* 👈 CONTROLS space between left menu and logo */
-}
-
-.nav-menu-right {
-    justify-content: flex-end;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-left: 30px; /* 👈 CONTROLS space between right menu and logo */
-}
-
-/* MENU HOVER EFFECTS */
 .nav-link {
-    text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
     font-size: 0.95rem;
     padding: 8px 16px;
     border-radius: 8px;
-    position: relative;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
-    white-space: nowrap;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
@@ -115,49 +98,14 @@
     transform: translateY(-2px);
 }
 
-.nav-link:hover::after {
-    width: 60%;
-}
-
-.nav-link.active-link {
-    color: var(--primary);
-    background: var(--primary-light);
-    font-weight: 600;
-}
-
-.nav-link.active-link::after {
-    width: 60%;
-}
-
-/* ACCOUNT & CART ACTIONS */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-account {
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-account, .nav-cart {
     padding: 8px;
     border-radius: 8px;
     transition: all 0.3s ease;
     color: var(--text-main);
 }
-
-.nav-account:hover {
-    color: var(--primary);
-    background: var(--primary-light);
-    transform: translateY(-2px);
-}
-
-.nav-cart {
-    position: relative;
-    color: var(--text-main);
-    transition: all 0.3s ease;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-.nav-cart:hover { 
+.nav-account:hover, .nav-cart:hover {
     color: var(--primary);
     background: var(--primary-light);
     transform: translateY(-2px);
@@ -165,38 +113,251 @@
 
 .cart-badge {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0; right: 0;
     background: var(--primary);
     color: white;
     font-size: 0.7rem;
     font-weight: 700;
-    width: 18px;
-    height: 18px;
+    width: 18px; height: 18px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* RESPONSIVE */
+/* ============================================
+   3. BUTTONS & SECTION HEADERS
+   ============================================ */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn-secondary:hover { background-color: var(--primary-light); }
+.btn-full { width: 100%; text-align: center; }
+
+section { padding: 80px 0; }
+
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-tag {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.section-title { font-size: 2.25rem; font-weight: 700; margin-bottom: 12px; }
+.section-subtitle { font-size: 1.125rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+/* ============================================
+   4. HERO SECTION
+   ============================================ */
+.section-hero {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+    padding: 160px 0 80px;
+    text-align: center;
+}
+.hero-tag {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 32px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; margin-bottom: 48px; }
+.hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--primary); }
+.stat-label { font-size: 0.9rem; color: var(--text-muted); }
+
+/* ============================================
+   5. ABOUT, CONSULTING & COURSES
+   ============================================ */
+.section-about { background-color: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.about-img { border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.about-content h3 { font-size: 1.75rem; margin-bottom: 16px; }
+.about-list { margin: 24px 0; }
+.about-list li { margin-bottom: 12px; color: var(--text-muted); }
+
+.section-consulting { background-color: var(--bg-light); }
+
+.consulting-grid, .course-grid, .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.consulting-card, .course-card, .video-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+.consulting-card:hover, .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.consulting-icon { font-size: 2rem; margin-bottom: 16px; }
+.consulting-link { color: var(--primary); font-weight: 600; display: inline-block; margin-top: 16px; }
+
+.format-toggle { display: flex; justify-content: center; gap: 12px; margin-bottom: 32px; }
+.toggle-btn {
+    padding: 10px 24px;
+    border: 2px solid var(--border);
+    background: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.toggle-btn.active { background-color: var(--primary); color: white; border-color: var(--primary); }
+
+.course-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.course-img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.course-title { font-size: 1.25rem; font-weight: 700; }
+
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+.badge.onsite { background-color: #dcfce7; color: #166534; }
+.badge.online { background-color: #e0e7ff; color: #3730a3; }
+
+.course-description { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; flex-grow: 1; }
+.course-meta { display: flex; gap: 16px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+.price { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+
+.btn-add-cart {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-add-cart:hover { background-color: #1d4ed8; }
+
+/* ============================================
+   6. YOUTUBE, CONTACT & ACCOUNT
+   ============================================ */
+.youtube-section { background-color: var(--white); }
+.video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 16px; }
+.video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.video-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+.video-meta { font-size: 0.9rem; color: var(--text-muted); }
+
+.section-contact, .section-account { background-color: var(--bg-light); }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+.contact-item { display: flex; gap: 16px; margin-bottom: 24px; }
+.contact-icon { font-size: 1.5rem; }
+
+.contact-form, .account-form {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+
+.checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-muted); }
+.checkbox-label input { width: auto; margin: 0; }
+.form-options { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 0.9rem; }
+.forgot-link { color: var(--primary); }
+
+.account-tabs { display: flex; justify-content: center; gap: 16px; margin-bottom: 32px; }
+.account-tab {
+    padding: 10px 24px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+.account-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.account-panel { display: none; }
+.account-panel.active { display: block; }
+
+/* ============================================
+   7. FOOTER
+   ============================================ */
+.footer { background-color: #111827; color: #9ca3af; padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-col h4 { color: white; margin-bottom: 16px; font-size: 1.1rem; }
+.footer-col h4 span { color: var(--primary); }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a:hover { color: white; }
+.social-links { display: flex; gap: 16px; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #374151; font-size: 0.9rem; }
+
+/* ============================================
+   8. RESPONSIVE DESIGN
+   ============================================ */
 @media (max-width: 900px) {
-    .nav-menu-left,
-    .nav-menu-right {
-        display: none;
-    }
-    
-    .nav-logo-center {
-        position: relative;
-        left: auto;
-        transform: none;
-    }
-    
-    .nav-logo-center:hover {
-        transform: scale(1.05);
-    }
-    
-    .logo-img {
-        height: 40px;
-    }
+    /* Navbar */
+    .nav-menu-left, .nav-menu-right { display: none; }
+    .nav-logo-center { position: relative; left: auto; transform: none; }
+    .nav-logo-center:hover { transform: scale(1.05); }
+    .logo-img { height: 40px; }
+    .nav-right { margin-left: 0; }
+
+    /* General */
+    .hero-title { font-size: 2rem; }
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
 }
