@@ -6,11 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultCount = document.getElementById('resultCount');
   const noResults = document.querySelector('.no-results');
 
-  // Function to evaluate and apply filters
   function applyFilters() {
-    // 1. Gather active filters into an object
+    // 1. Recopilar filtros activos
     const activeFilters = {
-      modality: [],
+      type: [],      // <-- Cambiado de 'modality' a 'type'
       sector: [],
       duration: [],
       level: []
@@ -24,23 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let visibleCount = 0;
 
-    // 2. Loop through cards and show/hide based on matches
+    // 2. Evaluar tarjetas
     courseCards.forEach(card => {
-      // Skip the "No Results" div
       if (card.classList.contains('no-results')) return;
 
-      const cModality = card.dataset.modality;
+      const cType = card.dataset.type;      // <-- Lee el nuevo atributo
       const cSector = card.dataset.sector;
       const cDuration = card.dataset.duration;
       const cLevel = card.dataset.level;
 
-      // Check if card matches active filters (if array is empty, it means "All" are accepted)
-      const matchModality = activeFilters.modality.length === 0 || activeFilters.modality.includes(cModality);
+      // Verifica coincidencias
+      const matchType = activeFilters.type.length === 0 || activeFilters.type.includes(cType);
       const matchSector = activeFilters.sector.length === 0 || activeFilters.sector.includes(cSector);
       const matchDuration = activeFilters.duration.length === 0 || activeFilters.duration.includes(cDuration);
       const matchLevel = activeFilters.level.length === 0 || activeFilters.level.includes(cLevel);
 
-      if (matchModality && matchSector && matchDuration && matchLevel) {
+      if (matchType && matchSector && matchDuration && matchLevel) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // 3. Update UI text and empty state
+    // 3. Actualizar UI
     resultCount.textContent = `Mostrando ${visibleCount} curso${visibleCount !== 1 ? 's' : ''}`;
     
     if (visibleCount === 0) {
