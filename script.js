@@ -1,5 +1,5 @@
 // ==========================================
-// FILTRO DE CURSOS (Presencial, Online, Mixta, Todos)
+// FILTRO DE CURSOS
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtns = document.querySelectorAll('.toggle-btn');
@@ -7,24 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // 1. Quitar la clase 'active' de todos los botones
+            // Remove 'active' class from all buttons
             toggleBtns.forEach(b => b.classList.remove('active'));
-            // 2. Poner la clase 'active' solo en el botón clickeado
+            // Add 'active' class to clicked button
             btn.classList.add('active');
 
-            // 3. Obtener el filtro seleccionado
+            // Get selected filter
             const filter = btn.getAttribute('data-filter');
 
-            // 4. Mostrar u ocultar las tarjetas de cursos
+            // Show/hide course cards
             courseCards.forEach(card => {
                 if (filter === 'all') {
-                    card.style.display = 'flex'; // Mostrar todos
+                    card.style.display = 'flex';
                 } else {
                     const type = card.getAttribute('data-type');
                     if (type === filter) {
-                        card.style.display = 'flex'; // Mostrar si coincide
+                        card.style.display = 'flex';
                     } else {
-                        card.style.display = 'none'; // Ocultar si no coincide
+                        card.style.display = 'none';
                     }
                 }
             });
@@ -32,45 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-    // --- EFECTO NAVBAR AL HACER SCROLL ---
+// ==========================================
+// NAVBAR SCROLL EFFECT
+// ==========================================
+window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    } else {
+        navbar.style.boxShadow = 'none';
+    }
+});
 
-    // --- SCROLL SUAVE PARA ENLACES DEL MENÚ ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                const offset = 80; // Compensar navbar fija
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-
-                // Actualizar enlace activo
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active-link');
-                });
-                if (this.classList.contains('nav-link')) {
-                    this.classList.add('active-link');
-                }
-            }
-        });
-    });
-
-    // --- TABS DE MI CUENTA (LOGIN / REGISTRO) ---
+// ==========================================
+// ACCOUNT TABS
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
     const accountTabs = document.querySelectorAll('.account-tab');
     const accountPanels = document.querySelectorAll('.account-panel');
 
@@ -81,18 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
             accountTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             
-            accountPanels.forEach(panel => panel.classList.remove('active'));
-            document.getElementById(`${targetTab}-panel`).classList.add('active');
+            accountPanels.forEach(panel => {
+                panel.classList.remove('active');
+                if (panel.id === `${targetTab}-panel`) {
+                    panel.classList.add('active');
+                }
+            });
         });
     });
+});
 
-    // --- FORMULARIO DE CONTACTO ---
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('¡Mensaje enviado! Te contactaremos pronto.');
-            contactForm.reset();
-        });
-    }
+// ==========================================
+// SMOOTH SCROLL
+// ==========================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
