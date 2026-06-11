@@ -1,23 +1,36 @@
+// ==========================================
+// FILTRO DE CURSOS (Presencial, Online, Mixta, Todos)
+// ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // --- FILTRADO DE CURSOS ---
     const toggleBtns = document.querySelectorAll('.toggle-btn');
     const courseCards = document.querySelectorAll('.course-card');
 
     toggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            // 1. Quitar la clase 'active' de todos los botones
             toggleBtns.forEach(b => b.classList.remove('active'));
+            // 2. Poner la clase 'active' solo en el botón clickeado
             btn.classList.add('active');
 
+            // 3. Obtener el filtro seleccionado
             const filter = btn.getAttribute('data-filter');
+
+            // 4. Mostrar u ocultar las tarjetas de cursos
             courseCards.forEach(card => {
-                if (card.getAttribute('data-type') === filter) {
-                    card.classList.remove('hidden');
+                if (filter === 'all') {
+                    card.style.display = 'flex'; // Mostrar todos
                 } else {
-                    card.classList.add('hidden');
+                    const type = card.getAttribute('data-type');
+                    if (type === filter) {
+                        card.style.display = 'flex'; // Mostrar si coincide
+                    } else {
+                        card.style.display = 'none'; // Ocultar si no coincide
+                    }
                 }
             });
         });
     });
+});
 
     // --- EFECTO NAVBAR AL HACER SCROLL ---
     const navbar = document.getElementById('navbar');
