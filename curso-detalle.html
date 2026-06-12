@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Curso | Algode Formación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Algode Formación" style="height: 45px; width: auto;">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html" style="color: var(--teal); font-weight: 700;">Cursos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- COURSE HERO -->
+  <section class="section" style="padding-bottom: 40px;">
+    <div class="container">
+      <a href="cursos.html" style="color: var(--teal); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">← Volver al catálogo</a>
+      
+      <div class="detail-header">
+        <div class="detail-badges">
+          <span class="card-badge badge-presencial" style="position: static;">Mixta</span>
+          <span class="card-badge" style="position: static; background: var(--bg-light); color: var(--navy); border: 1px solid var(--border);">Código: <span id="courseCode"></span></span>
+        </div>
+        <h1 id="courseTitle" style="margin-bottom: 16px;">Cargando curso...</h1>
+        <p id="courseDesc" style="font-size: 1.1rem; max-width: 800px;"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT LAYOUT -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container detail-layout">
+      
+      <!-- LEFT COLUMN: CONTENT -->
+      <main class="detail-main">
+        
+        <div class="detail-section">
+          <h3>🎯 Destinatarios y Objetivos</h3>
+          <p><strong>Dirigido a:</strong> <span id="courseTarget"></span></p>
+          <p><strong>Objetivo:</strong> <span id="courseObjectives"></span></p>
+        </div>
+
+        <div class="detail-section">
+          <h3>📚 Programa Formativo</h3>
+          <ul class="syllabus-list" id="courseSyllabus"></ul>
+        </div>
+
+        <div class="detail-section">
+          <h3>🛠️ Prácticas Reales</h3>
+          <p style="margin-bottom: 16px;">Las sesiones presenciales se realizan en nuestras instalaciones de <strong>Dualez (Torrelavega)</strong> con maquinaria real.</p>
+          <ul class="syllabus-list" id="coursePractices"></ul>
+        </div>
+
+        <div class="detail-section">
+          <h3>🏆 Acreditación y Vigencia</h3>
+          <div class="cert-box">
+            <p><strong>Certificación:</strong> <span id="courseCert"></span></p>
+            <p><strong>Vigencia recomendada:</strong> <span id="courseValidity"></span></p>
+            <div style="margin-top: 16px; padding: 16px; background: rgba(0, 180, 216, 0.05); border-radius: 8px; border-left: 4px solid var(--teal);">
+              <strong>✅ Formación 100% Bonificable (FUNDAE)</strong>
+              <p style="margin: 8px 0 0; font-size: 0.9rem;">Posibilidad de gestión mediante formación programada para empresas.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- RIGHT COLUMN: STICKY SIDEBAR -->
+      <aside class="detail-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-img">
+            <img id="courseImage" src="" alt="Curso" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="sidebar-body">
+            <div class="sidebar-info">
+              <div class="info-item">
+                <span class="info-icon">⏱️</span>
+                <div>
+                  <strong>Duración</strong>
+                  <span id="courseDuration"></span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🎓</span>
+                <div>
+                  <strong>Modalidad</strong>
+                  <span id="courseModality"></span>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Prácticas</strong>
+                  <span>Torrelavega</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="sidebar-price">
+              <span style="font-size: 0.9rem; color: var(--text-light);">Precio:</span>
+              <span id="coursePrice" style="font-size: 1.5rem; font-weight: 800; color: var(--navy);"></span>
+            </div>
+
+            <a href="inscripcion.html" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">Reservar Plaza</a>
+            <a href="#contacto" class="btn btn-secondary" style="width: 100%;">Solicitar Info para Empresas</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta">
+    <a href="inscripcion.html" class="btn btn-primary">Reservar Plaza Ahora</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/course-data.js"></script>
+  <script src="js/course-detail.js"></script>
+</body>
+</html>
