@@ -100,3 +100,52 @@ img { max-width: 100%; display: block; }
   .sticky-cta { display: block; }
   .course-grid { grid-template-columns: 1fr; }
 }
+
+/* =========================================
+   9. COURSE DETAIL PAGE LAYOUT
+   ========================================= */
+.detail-badges { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.detail-layout { display: grid; grid-template-columns: 1fr 350px; gap: 48px; align-items: start; }
+.detail-section { margin-bottom: 48px; }
+.detail-section h3 { font-size: 1.5rem; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+
+.syllabus-list { list-style: none; padding: 0; }
+.syllabus-list li { 
+  position: relative; padding-left: 28px; margin-bottom: 12px; color: var(--text-light); 
+}
+.syllabus-list li::before { 
+  content: "✓"; position: absolute; left: 0; top: 0; 
+  color: var(--teal); font-weight: 800; font-size: 1.1rem; 
+}
+
+.cert-box { background: var(--bg-light); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); }
+.cert-box p { margin-bottom: 12px; }
+.cert-box p:last-child { margin-bottom: 0; }
+
+/* Sidebar Card */
+.sidebar-card { 
+  background: var(--white); border-radius: var(--radius); overflow: hidden; 
+  box-shadow: var(--shadow-lg); border: 1px solid var(--border); 
+  position: sticky; top: 100px; 
+}
+.sidebar-img { height: 220px; background: var(--navy-light); }
+.sidebar-body { padding: 24px; }
+
+.sidebar-info { margin-bottom: 24px; }
+.info-item { display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-start; }
+.info-icon { font-size: 1.2rem; background: var(--bg-light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; flex-shrink: 0; }
+.info-item div { display: flex; flex-direction: column; }
+.info-item strong { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+.info-item span { font-weight: 600; color: var(--navy); font-size: 0.95rem; }
+
+.sidebar-price { 
+  display: flex; justify-content: space-between; align-items: center; 
+  padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); 
+  margin-bottom: 24px; 
+}
+
+@media (max-width: 900px) {
+  .detail-layout { grid-template-columns: 1fr; }
+  .detail-sidebar { order: -1; margin-bottom: 32px; }
+  .sidebar-card { position: static; }
+}
