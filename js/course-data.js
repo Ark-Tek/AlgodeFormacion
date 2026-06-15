@@ -164,4 +164,109 @@ const coursesData = [
     fundae: true,
     image: "assets/images/grua-camion.jpeg"
   }
+    // === NUEVOS CURSOS PROFESIONALES ===
+
+  {
+    id: "03.01.01",
+    code: "03.01.01",
+    title: "Especialista en Preparación de Pedidos (Picking)",
+    shortTitle: "Picking",
+    description: "En un mundo donde la rapidez es fundamental, el preparador de pedidos es una pieza clave. Este curso te especializa en la gestión eficiente de comandas, enseñándote a optimizar rutas de recogida y a dominar las técnicas de Picking más avanzadas.",
+    duration: "300 horas",
+    durationDetail: "Online + Prácticas",
+    modality: "Online",
+    price: "149€",
+    startDate: "22/06/2026",
+    target: "Operarios de almacén, logística, e-commerce y distribución.",
+    objectives: "Aprenderás a utilizar tecnología de vanguardia como terminales de radiofrecuencia (PDA) y sistemas de voz, garantizando que cada paquete llegue a su destino sin errores.",
+    syllabus: [
+      "Sistemas de Picking: Manual, con radiofrecuencia (PDA) y Pick-to-light.",
+      "Optimización de Tiempos: Organización de rutas y consolidación de cargas.",
+      "Packing y Embalaje: Técnicas de empaquetado para asegurar la integridad del producto.",
+      "Control de Stock: Gestión de inventarios y prevención de errores en el pedido."
+    ],
+    practices: [],
+    certification: "Certificado de Profesionalidad",
+    validity: "Indefinida",
+    fundae: true,
+    image: "assets/images/picking.jpg" // Asegúrate de guardar la imagen con este nombre
+  },
+  {
+    id: "01.08.01",
+    code: "01.08.01",
+    title: "Operador de Plataformas Elevadoras (PEMP)",
+    shortTitle: "PEMP",
+    description: "Si eres electricista, pintor, instalador o profesional del mantenimiento, el carnet de PEMP no es solo una ventaja: es una obligación legal. En Algode Formación te ofrecemos el equilibrio perfecto: una formación teórica flexible y una sesión de prácticas presenciales donde dominarás la conducción, elevación y aproximación con total seguridad.",
+    duration: "300 horas",
+    durationDetail: "Mixta",
+    modality: "Mixta",
+    price: "150€",
+    startDate: "25/05/2026",
+    target: "Mantenimiento industrial, construcción, pintura, electricidad y montaje.",
+    objectives: "Cumple con la normativa, evita riesgos y obtén la capacitación técnica que exige tu sector.",
+    syllabus: [
+      "Seguridad Total: Evaluación de riesgos y medidas de protección según la ley.",
+      "Tipología PEMP: Identificación de categorías y características técnicas.",
+      "Normativa: RD 1215/97 y guías técnicas de seguridad.",
+      "Destreza Práctica: Maniobras reales de elevación y conducción en entorno seguro."
+    ],
+    practices: [
+      "Conducción y maniobras en plataforma",
+      "Procedimientos de emergencia y bajada de emergencia"
+    ],
+    certification: "Carnet de Operador PEMP Homologado",
+    validity: "5 años",
+    fundae: true,
+    image: "assets/images/pemp.jpg" 
+  },
+  {
+    id: "05.01.01",
+    code: "05.01.01",
+    title: "Inserción Laboral",
+    shortTitle: "Inserción Laboral",
+    description: "Dominar el mercado de trabajo actual requiere más que un buen CV. En este curso te damos las herramientas clave: desde la identificación de canales de empleo específicos de tu sector hasta técnicas de entrevista de alto impacto. Aprende a moverte en tu mercado profesional y acelera tu incorporación al puesto que buscas.",
+    duration: "360 horas",
+    durationDetail: "Online",
+    modality: "Online",
+    price: "100€",
+    startDate: "08/06/2026",
+    target: "Demandantes de empleo, estudiantes y personas en reconversión profesional.",
+    objectives: "Identificar técnicas y recursos facilitadores de la inserción laboral, así como la situación del mercado de trabajo en la familia profesional en la que se integra esta acción formativa principal.",
+    syllabus: [
+      "Interpretar la situación y tendencias del sector productivo.",
+      "Utilizar la agenda como herramienta de búsqueda de empleo.",
+      "Identificar los canales de empleo de la formación principal.",
+      "Aplicar técnicas a la hora de preparar la entrevista de selección."
+    ],
+    practices: [],
+    certification: "Certificado de Participación",
+    validity: "Indefinida",
+    fundae: true,
+    image: "assets/images/insercion-laboral.jpg"
+  },
+  {
+    id: "05.02.01",
+    code: "05.02.01",
+    title: "Sensibilización en Igualdad de Género",
+    shortTitle: "Igualdad de Género",
+    description: "En este curso de Sensibilización en Igualdad de Género, exploramos los conceptos fundamentales de la igualdad, el marco legal vigente y las herramientas prácticas para identificar y eliminar sesgos en el ámbito laboral. Una formación esencial para profesionales que buscan liderar el cambio hacia organizaciones más equitativas, diversas y respetuosas.",
+    duration: "148 horas",
+    durationDetail: "Online",
+    modality: "Online",
+    price: "100€",
+    startDate: "15/06/2026",
+    target: "RRHH, mandos intermedios, delegados de prevención y toda la plantilla.",
+    objectives: "Construye un entorno de trabajo más justo y productivo, cumpliendo con la Ley de Igualdad y mejorando el clima laboral de tu empresa.",
+    syllabus: [
+      "Conceptos básicos: Sexo, género y roles.",
+      "Marco legal: Ley Orgánica 3/2007 y Planes de Igualdad.",
+      "Detección de sesgos y micro-machismos en el entorno laboral.",
+      "Herramientas prácticas para la conciliación y corresponsabilidad."
+    ],
+    practices: [],
+    certification: "Certificado de Aprovechamiento",
+    validity: "Indefinida",
+    fundae: true,
+    image: "assets/images/igualdad.jpg"
+  }
 ];
