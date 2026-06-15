@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Curso | Algode Formación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* New Course Detail Design */
+    .course-detail-header {
+      background: linear-gradient(135deg, #f5f7ff 0%, #e8eeff 100%);
+      padding: 60px 0 40px;
+    }
+    
+    .course-detail-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    
+    .breadcrumb {
+      text-align: center;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
+    
+    .breadcrumb a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    
+    .course-hero {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 32px;
+      align-items: stretch;
+      margin-bottom: 60px;
+    }
+    
+    .course-info-box {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(10, 25, 47, 0.08);
+      height: fit-content;
+    }
+    
+    .info-box-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    
+    .info-item-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--bg-light);
+      border-radius: 12px;
+    }
+    
+    .info-icon-box {
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+    
+    .info-content strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    
+    .info-content span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    
+    .btn-solicitar {
+      width: 100%;
+      padding: 16px;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .btn-solicitar:hover {
+      background: var(--teal);
+      transform: translateY(-2px);
+    }
+    
+    .course-image-box {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(10, 25, 47, 0.08);
+    }
+    
+    .course-image-box img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    
+    .course-content {
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+    
+    .content-section {
+      margin-bottom: 48px;
+    }
+    
+    .content-section h3 {
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    
+    .content-section p {
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .content-section ul li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    
+    .content-section ul li::before {
+      content: "•";
+      color: var(--teal);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+    
+    .course-footer {
+      background: linear-gradient(135deg, #e8eeff 0%, #f5f7ff 100%);
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      width: 80px;
+      margin: 0 auto 24px;
+    }
+    
+    .footer-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    
+    .footer-subtitle {
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    
+    @media (max-width: 900px) {
+      .course-hero {
+        grid-template-columns: 1fr;
+      }
+      .course-info-box {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-text">
+          <span class="logo-main">ALGODE</span>
+          <span class="logo-sub">Formación & Asesoría</span>
+        </div>
+        <img src="assets/images/logo.png" alt="Algode" style="height: 40px;">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- COURSE DETAIL HEADER -->
+  <section class="course-detail-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="cursos.html">CURSOS FORMACIÓN ALGODE</a> → <span id="breadcrumbCourse"></span>
+      </div>
+      <h1 class="course-detail-title" id="courseTitle">Cargando...</h1>
+    </div>
+  </section>
+
+  <!-- COURSE HERO -->
+  <section class="section">
+    <div class="container">
+      <div class="course-hero">
+        <!-- Info Box -->
+        <div class="course-info-box">
+          <div class="info-box-title">INFORMACIÓN BÁSICA</div>
+          
+          <div class="info-item-box">
+            <div class="info-icon-box">🏷️</div>
+            <div class="info-content">
+              <strong>Precio</strong>
+              <span id="coursePrice"></span>
+            </div>
+          </div>
+
+          <div class="info-item-box">
+            <div class="info-icon-box">⏱️</div>
+            <div class="info-content">
+              <strong>Duración</strong>
+              <span id="courseDuration"></span>
+            </div>
+          </div>
+
+          <div class="info-item-box">
+            <div class="info-icon-box">📅</div>
+            <div class="info-content">
+              <strong>Comienzo</strong>
+              <span id="courseStartDate"></span>
+            </div>
+          </div>
+
+          <button class="btn-solicitar" onclick="window.location.href='inscripcion.html'">Solicitar Curso</button>
+        </div>
+
+        <!-- Image -->
+        <div class="course-image-box">
+          <img id="courseImage" src="" alt="Curso">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE CONTENT -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container course-content">
+      
+      <div class="content-section">
+        <h3 id="sectionTitle1">Construye un entorno de trabajo más justo y productivo</h3>
+        <p id="courseDescription"></p>
+      </div>
+
+      <div class="content-section">
+        <h3>Objetivo General:</h3>
+        <p id="courseObjectives"></p>
+      </div>
+
+      <div class="content-section">
+        <h3>¿Qué aprenderás con nosotros?</h3>
+        <ul id="courseSyllabus"></ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="course-footer">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Algode" class="footer-logo">
+      <h3 class="footer-title" id="footerTitle">Igualdad de oportunidades: el lenguaje de las empresas con futuro.</h3>
+      <p class="footer-subtitle" id="footerSubtitle">Construye un entorno de trabajo más justo y productivo</p>
+      <button class="btn-solicitar" style="max-width: 200px; margin: 0 auto;" onclick="window.location.href='inscripcion.html'">Apúntate</button>
+    </div>
+  </section>
+
+  <script src="js/course-data.js"></script>
+  <script>
+    // Load course data
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const courseId = urlParams.get('id');
+      const course = coursesData.find(c => c.id === courseId);
+
+      if (!course) {
+        document.getElementById('courseTitle').textContent = "Curso no encontrado";
+        return;
+      }
+
+      // Update page
+      document.title = `${course.title} | Algode Formación`;
+      document.getElementById('breadcrumbCourse').textContent = course.shortTitle.toUpperCase();
+      document.getElementById('courseTitle').textContent = course.title;
+      document.getElementById('coursePrice').textContent = `${course.price} (IVA Incluido)`;
+      document.getElementById('courseDuration').textContent = `${course.duration}`;
+      document.getElementById('courseStartDate').textContent = course.startDate;
+      document.getElementById('courseDescription').textContent = course.description;
+      document.getElementById('courseObjectives').textContent = course.objectives;
+      document.getElementById('courseImage').src = course.image;
+      document.getElementById('courseImage').alt = course.title;
+
+      // Build syllabus
+      const syllabusList = document.getElementById('courseSyllabus');
+      course.syllabus.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        syllabusList.appendChild(li);
+      });
+
+      // Update footer
+      document.getElementById('footerTitle').textContent = `Especialízate en ${course.shortTitle} y trabaja en los centros más punteros.`;
+      document.getElementById('footerSubtitle').textContent = course.description.substring(0, 100) + "...";
+    });
+  </script>
+</body>
+</html>
