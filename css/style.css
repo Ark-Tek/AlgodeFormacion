@@ -122,7 +122,13 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-links a { font-weight: 500; transition: var(--transition); }
+.nav-links a { 
+  display: inline-flex; /* This is the key fix */
+  align-items: center;  /* This centers the icon and text vertically */
+  gap: 8px;             /* Adds a small space between the icon and "Inicio" */
+  font-weight: 500; 
+  transition: var(--transition); 
+}
 .nav-links a:hover { color: var(--teal); }
 
 .hero { padding: 100px 0; text-align: center; }
