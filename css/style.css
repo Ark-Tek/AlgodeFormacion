@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
 .btn-primary { background: #00B4D8; color: var(--white); }
 .btn-primary:hover { background: #ff5252; transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .btn-secondary { background: #00B4D8; color: var(--navy); border-color: var(--navy); }
-.btn-secondary:hover { background: var(#55B4D8); color: var(--white); }
+.btn-secondary:hover { background: #55B4D8; color: var(--white); }
 
 .course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; }
 .course-card {
