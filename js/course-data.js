@@ -130,7 +130,7 @@ const coursesData = [
     certification: "Diploma acreditativo y Carnet de Operador de Apilador y Transpaleta Eléctrica",
     validity: "5 años",
     fundae: true,
-    image: "assets/images/operaciones-auxiliares-almacenaje.jpeg"
+    image: "assets/images/transpaleta-electrica.jpg"
   },
   {
     id: "01.05.02",
