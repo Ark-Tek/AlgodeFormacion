@@ -248,6 +248,34 @@ const coursesData = [
     fundae: true,
     image: "assets/images/insercion-laboral.jpg"
   },
+    {
+    id: "05.03.01",
+    code: "05.03.01",
+    title: "Sensibilidad Medioambiental",
+    shortTitle: "Medioambiente",
+    description: "Cuidar el entorno ya no es una opción, es una competencia profesional imprescindible. En este curso, analizamos la realidad climática actual y te damos las herramientas prácticas para aplicar la regla de las 3R (Reducir, Reciclar y Reutilizar) en tu día a día laboral. Aprende a identificar y liderar mejoras ambientales desde tu escritorio para generar un impacto positivo real.",
+    duration: "100 horas",
+    durationDetail: "Online",
+    modality: "Online",
+    price: "98€",
+    startDate: "25/05/2026",
+    target: "Todos los profesionales que deseen integrar la sostenibilidad en su entorno laboral.",
+    objectives: "Potenciar la sensibilización medioambiental del participante. Tomar consciencia de la gravedad de la situación medioambiental, también en el ámbito laboral. Aplicar las reglas de mejora medioambiental Reutilizar, Reciclar y Reducir en el contexto de las relaciones laborales. Identificar acciones de mejora encaminadas a reducir la contaminación medioambiental desde nuestro puesto de trabajo.",
+    syllabus: [
+      "Importancia del cuidado del medio ambiente en el ámbito laboral",
+      "Realidad climática actual y su impacto",
+      "La regla de las 3R: Reducir, Reciclar y Reutilizar",
+      "Aplicación práctica en el día a día laboral",
+      "Identificación de acciones de mejora ambiental",
+      "Liderazgo de mejoras ambientales desde el puesto de trabajo",
+      "Reducción de la contaminación medioambiental"
+    ],
+    practices: [],
+    certification: "Certificado de Aprovechamiento",
+    validity: "Indefinida",
+    fundae: true,
+    image: "assets/images/sensibilidad-medioambiental.jpg"
+  },
   {
     id: "05.02.01",
     code: "05.02.01",
