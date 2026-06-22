@@ -1,4 +1,5 @@
 const coursesData = [
+  // === CURSOS DE MAQUINARIA ===
   {
     id: "01.12.01",
     code: "01.12.01",
@@ -104,28 +105,31 @@ const coursesData = [
     code: "01.10.13",
     title: "Operador de Apilador y Transpaleta Eléctrica",
     shortTitle: "Apilador y Transpaleta Eléctrica",
-    description: "Formación teórico-práctica orientada al manejo seguro de apiladores y transpaletas eléctricas, capacitando al alumnado para realizar operaciones básicas de traslado, carga, descarga y almacenamiento de mercancías.",
+    description: "Formación teórico-práctica orientada al manejo seguro de apiladores y transpaletas eléctricas, capacitando al alumnado para realizar operaciones básicas de traslado, carga, descarga y almacenamiento de mercancías aplicando criterios de seguridad y prevención de riesgos laborales.",
     duration: "10 horas",
     durationDetail: "5h online + 5h prácticas",
     modality: "Mixta",
-    price: "100€",
-    startDate: "08/06/2026",
+    price: "Consultar",
+    startDate: "Consultar convocatoria",
     target: "Trabajadores de almacén, logística, preparación de pedidos, distribución y actividades auxiliares de almacenamiento.",
-    objectives: "Capacitar al alumnado para la utilización segura de apiladores y transpaletas eléctricas, realizando operaciones básicas de manipulación y almacenamiento de mercancías.",
+    objectives: "Capacitar al alumnado para la utilización segura de apiladores y transpaletas eléctricas, identificando riesgos, aplicando medidas preventivas y realizando operaciones básicas de manipulación y almacenamiento de mercancías.",
     syllabus: [
       "Identificación y clasificación de apiladores y transpaletas manuales y eléctricas",
       "Componentes principales y funcionamiento",
       "Normativa aplicable y prevención de riesgos laborales",
       "Comportamiento del equipo en movimiento y en parada",
-      "Procedimientos seguros de carga, descarga y traslado",
-      "Estiba y desestiba en estanterías y riesgos en rampas"
+      "Procedimientos seguros de carga, descarga y traslado de mercancías",
+      "Estiba y desestiba en estanterías",
+      "Riesgos asociados al trabajo en rampas y espacios reducidos",
+      "Equipos de protección individual y mantenimiento básico"
     ],
     practices: [
       "Inspección visual previa y comprobación de elementos de seguridad",
       "Marcha adelante y atrás, giros en espacios reducidos",
       "Elevación y descenso de cargas",
       "Estiba y desestiba en estanterías",
-      "Circulación en rampa y maniobras en espacios confinados"
+      "Circulación en rampa y maniobras en espacios confinados",
+      "Operaciones con carga parcial o descentrada"
     ],
     certification: "Diploma acreditativo y Carnet de Operador de Apilador y Transpaleta Eléctrica",
     validity: "5 años",
@@ -163,9 +167,9 @@ const coursesData = [
     validity: "5 años",
     fundae: true,
     image: "assets/images/grua-camion.jpeg"
-  }
-    // === NUEVOS CURSOS PROFESIONALES ===
+  },
 
+  // === CURSOS PROFESIONALES ===
   {
     id: "03.01.01",
     code: "03.01.01",
@@ -189,7 +193,7 @@ const coursesData = [
     certification: "Certificado de Profesionalidad",
     validity: "Indefinida",
     fundae: true,
-    image: "assets/images/picking.jpg" // Asegúrate de guardar la imagen con este nombre
+    image: "assets/images/picking.jpg"
   },
   {
     id: "01.08.01",
@@ -217,7 +221,7 @@ const coursesData = [
     certification: "Carnet de Operador PEMP Homologado",
     validity: "5 años",
     fundae: true,
-    image: "assets/images/pemp.jpg" 
+    image: "assets/images/pemp.jpg"
   },
   {
     id: "05.01.01",
@@ -262,42 +266,6 @@ const coursesData = [
       "Marco legal: Ley Orgánica 3/2007 y Planes de Igualdad.",
       "Detección de sesgos y micro-machismos en el entorno laboral.",
       "Herramientas prácticas para la conciliación y corresponsabilidad."
-      {
-    id: "01.10.13",
-    code: "01.10.13",
-    title: "Operador de Apilador y Transpaleta Eléctrica",
-    shortTitle: "Apilador y Transpaleta Eléctrica",
-    description: "Formación teórico-práctica orientada al manejo seguro de apiladores y transpaletas eléctricas, capacitando al alumnado para realizar operaciones básicas de traslado, carga, descarga y almacenamiento de mercancías aplicando criterios de seguridad y prevención de riesgos laborales.",
-    duration: "10 horas",
-    durationDetail: "5h online + 5h prácticas",
-    modality: "Mixta",
-    price: "Consultar",
-    startDate: "Consultar convocatoria",
-    target: "Trabajadores de almacén, logística, preparación de pedidos, distribución y actividades auxiliares de almacenamiento.",
-    objectives: "Capacitar al alumnado para la utilización segura de apiladores y transpaletas eléctricas, identificando riesgos, aplicando medidas preventivas y realizando operaciones básicas de manipulación y almacenamiento de mercancías.",
-    syllabus: [
-      "Identificación y clasificación de apiladores y transpaletas manuales y eléctricas",
-      "Componentes principales y funcionamiento",
-      "Normativa aplicable y prevención de riesgos laborales",
-      "Comportamiento del equipo en movimiento y en parada",
-      "Procedimientos seguros de carga, descarga y traslado de mercancías",
-      "Estiba y desestiba en estanterías",
-      "Riesgos asociados al trabajo en rampas y espacios reducidos",
-      "Equipos de protección individual y mantenimiento básico"
-    ],
-    practices: [
-      "Inspección visual previa y comprobación de elementos de seguridad",
-      "Marcha adelante y atrás, giros en espacios reducidos",
-      "Elevación y descenso de cargas",
-      "Estiba y desestiba en estanterías",
-      "Circulación en rampa y maniobras en espacios confinados",
-      "Operaciones con carga parcial o descentrada"
-    ],
-    certification: "Diploma acreditativo y Carnet de Operador",
-    validity: "5 años",
-    fundae: true,
-    image: "assets/images/operaciones-auxiliares-almacenaje.jpeg"
-  }
     ],
     practices: [],
     certification: "Certificado de Aprovechamiento",
