@@ -262,6 +262,42 @@ const coursesData = [
       "Marco legal: Ley Orgánica 3/2007 y Planes de Igualdad.",
       "Detección de sesgos y micro-machismos en el entorno laboral.",
       "Herramientas prácticas para la conciliación y corresponsabilidad."
+      {
+    id: "01.10.13",
+    code: "01.10.13",
+    title: "Operador de Apilador y Transpaleta Eléctrica",
+    shortTitle: "Apilador y Transpaleta Eléctrica",
+    description: "Formación teórico-práctica orientada al manejo seguro de apiladores y transpaletas eléctricas, capacitando al alumnado para realizar operaciones básicas de traslado, carga, descarga y almacenamiento de mercancías aplicando criterios de seguridad y prevención de riesgos laborales.",
+    duration: "10 horas",
+    durationDetail: "5h online + 5h prácticas",
+    modality: "Mixta",
+    price: "Consultar",
+    startDate: "Consultar convocatoria",
+    target: "Trabajadores de almacén, logística, preparación de pedidos, distribución y actividades auxiliares de almacenamiento.",
+    objectives: "Capacitar al alumnado para la utilización segura de apiladores y transpaletas eléctricas, identificando riesgos, aplicando medidas preventivas y realizando operaciones básicas de manipulación y almacenamiento de mercancías.",
+    syllabus: [
+      "Identificación y clasificación de apiladores y transpaletas manuales y eléctricas",
+      "Componentes principales y funcionamiento",
+      "Normativa aplicable y prevención de riesgos laborales",
+      "Comportamiento del equipo en movimiento y en parada",
+      "Procedimientos seguros de carga, descarga y traslado de mercancías",
+      "Estiba y desestiba en estanterías",
+      "Riesgos asociados al trabajo en rampas y espacios reducidos",
+      "Equipos de protección individual y mantenimiento básico"
+    ],
+    practices: [
+      "Inspección visual previa y comprobación de elementos de seguridad",
+      "Marcha adelante y atrás, giros en espacios reducidos",
+      "Elevación y descenso de cargas",
+      "Estiba y desestiba en estanterías",
+      "Circulación en rampa y maniobras en espacios confinados",
+      "Operaciones con carga parcial o descentrada"
+    ],
+    certification: "Diploma acreditativo y Carnet de Operador",
+    validity: "5 años",
+    fundae: true,
+    image: "assets/images/operaciones-auxiliares-almacenaje.jpeg"
+  }
     ],
     practices: [],
     certification: "Certificado de Aprovechamiento",
