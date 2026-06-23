@@ -265,70 +265,107 @@
     </section>
 
     <!-- SECCIÓN: CONTACTO -->
-    <section id="contacto" class="section-contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Hablemos</span>
-                <h2 class="section-title">Contacto</h2>
-                <p class="section-subtitle">¿Tienes dudas? Escríbenos y te responderemos en menos de 24 horas</p>
-            </div>
+<section id="contacto" class="section" style="background: var(--bg-light);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 48px;">
+      <h2 style="margin-bottom: 16px;">Contacto</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">
+        ¿Tienes dudas? Escríbenos y te responderemos en menos de 24 horas
+      </p>
+    </div>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Dirección</h4>
-                            <p>Calle Ejemplo 123, Madrid, España</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Teléfono</h4>
-                            <p>+34 900 123 456</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@algode.es</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"></div>
-                        <div>
-                            <h4>Horario</h4>
-                            <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nombre completo</label>
-                        <input type="text" id="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="tu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" placeholder="+34 600 000 000">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary btn-full">Enviar mensaje</button>
-                </form>
+    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start;">
+      
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-card" style="background: var(--white); padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-md); margin-bottom: 24px;">
+          <h3 style="margin-bottom: 24px; font-size: 1.25rem;">Información de Contacto</h3>
+          
+          <div class="contact-item" style="display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); font-size: 1.2rem;">📍</div>
+            <div>
+              <strong style="display: block; margin-bottom: 4px; color: var(--navy);">Dirección</strong>
+              <span style="color: var(--text-light);">Calle Ejemplo 123, Madrid, España</span>
             </div>
+          </div>
+
+          <div class="contact-item" style="display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); font-size: 1.2rem;">📞</div>
+            <div>
+              <strong style="display: block; margin-bottom: 4px; color: var(--navy);">Teléfono</strong>
+              <span style="color: var(--text-light);">+34 900 123 456</span>
+            </div>
+          </div>
+
+          <div class="contact-item" style="display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); font-size: 1.2rem;">✉️</div>
+            <div>
+              <strong style="display: block; margin-bottom: 4px; color: var(--navy);">Email</strong>
+              <span style="color: var(--text-light);">info@algode.es</span>
+            </div>
+          </div>
+
+          <div class="contact-item" style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); font-size: 1.2rem;">🕐</div>
+            <div>
+              <strong style="display: block; margin-bottom: 4px; color: var(--navy);">Horario</strong>
+              <span style="color: var(--text-light);">Lunes a Viernes: 9:00 - 18:00</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
+      <!-- Contact Form -->
+      <div class="contact-form" style="background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-md);">
+        <h3 style="margin-bottom: 24px; font-size: 1.25rem;">Envíanos un Mensaje</h3>
+        
+        <form style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy); font-size: 0.9rem;">Nombre completo *</label>
+              <input type="text" placeholder="Tu nombre" required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; transition: var(--transition);">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy); font-size: 0.9rem;">Teléfono</label>
+              <input type="tel" placeholder="+34 600 000 000" style="width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; transition: var(--transition);">
+            </div>
+          </div>
 
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy); font-size: 0.9rem;">Email *</label>
+            <input type="email" placeholder="tu@email.com" required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; transition: var(--transition);">
+          </div>
+
+          <div>
+            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy); font-size: 0.9rem;">Mensaje *</label>
+            <textarea placeholder="¿En qué podemos ayudarte?" rows="5" required style="width: 100%; padding: 12px 16px; border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: var(--font-body); resize: vertical; transition: var(--transition);"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="padding: 16px 32px; font-size: 1rem; margin-top: 8px;">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Input focus styles */
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+  
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta">
     <a href="cursos.html" class="btn btn-secondary">Ver Cursos Disponibles</a>
